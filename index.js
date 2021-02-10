@@ -1,17 +1,41 @@
-import observer from './observer'
+function cb(val) {
+  /* 渲染视图 */
+  console.log('视图更新啦～')
+}
+
+function defineReactive(obj, key, val) {
+  Object.defineProperty(obj, key, {
+    enumerable: true,
+    configurable: true,
+    get() {
+      return val
+    },
+    set(newVal) {
+      if (val === newVal) return
+      cb(newVal)
+    }
+  })
+}
+
+function observer(data) {
+  if (data === null || typeof data !== 'object') return
+
+  Object.keys(data).forEach((key) => {
+    defineReactive(data, key, data[key])
+  })
+}
 
 class Vue {
   constructor(options) {
     this._data = options.data
-
     observer(this._data)
   }
 }
 
-const vm = new Vue({
+let o = new Vue({
   data: {
-    a: [1, 2, 3]
+    test: 'I am test.'
   }
 })
 
-vm._data.a = [4, 5, 6]
+o._data.test = 'hello,world.' /* 视图更新啦～ */
