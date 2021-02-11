@@ -1,41 +1,28 @@
-function cb(val) {
-  /* 渲染视图 */
-  console.log('视图更新啦～')
-}
-
-function defineReactive(obj, key, val) {
-  Object.defineProperty(obj, key, {
-    enumerable: true,
-    configurable: true,
-    get() {
-      return val
-    },
-    set(newVal) {
-      if (val === newVal) return
-      cb(newVal)
-    }
-  })
-}
-
-function observer(data) {
-  if (data === null || typeof data !== 'object') return
-
-  Object.keys(data).forEach((key) => {
-    defineReactive(data, key, data[key])
-  })
-}
+import { Watcher, observer } from './observer'
 
 class Vue {
   constructor(options) {
     this._data = options.data
+    // 新建一个观察者，这时候 Dep.target 会指向这个观察者
+    new Watcher()
+
     observer(this._data)
+
+    console.log('~~~render')
   }
 }
 
 let o = new Vue({
   data: {
-    test: 'I am test.'
+    test: 'I am test.',
+    a: 1
   }
 })
 
-o._data.test = 'hello,world.' /* 视图更新啦～ */
+console.log(o._data.test)
+
+o._data.test = 'hello,world.'
+
+console.log(o._data.test)
+
+console.log(o._data.a)

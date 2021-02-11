@@ -4,8 +4,14 @@ class Dep {
     this.subscribes = []
   }
 
+  // Observer 的订阅
   register(observer) {
     this.subscribes.push(observer)
+  }
+
+  // Observer 触发更新
+  notify() {
+    this.subscribes.forEach((subscribe) => subscribe.update())
   }
 
   remove(observer) {
@@ -13,8 +19,6 @@ class Dep {
       (subscribe) => subscribe !== observer
     )
   }
-
-  notify() {
-    this.subscribes.forEach((subscribe) => subscribe.update(...args))
-  }
 }
+
+export default Dep
