@@ -1,0 +1,53 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add --dev flow-bin
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;E:\cyLitter_Computer\python3_8\Scripts\;E:\cyLitter_Computer\python3_8\;C:\Program Files (x86)\Intel\TXE Components\TCS\;C:\Program Files\Intel\TXE Components\TCS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\TXE Components\DAL\;C:\Program Files (x86)\Intel\TXE Components\DAL\;C:\Program Files\Intel\TXE Components\IPT\;C:\Program Files (x86)\Intel\TXE Components\IPT\;C:\Program Files\Java\jdk1.8.0_201\bin;C:\Program Files\Java\jdk1.8.0_201\jre\bin;E:\Download\Redis-x64-3.2.100;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;E:\Download\apache-maven-3.6.3-bin\apache-maven-3.6.3\bin;E:\Download\scala-2.11.12\bin;E:\Download\spark-2.0.1-bin-hadoop2.7\spark-2.0.1-bin-hadoop2.7\bin;%HADOOP_HOME\bin%;E:\cyLitter_Computer\Anaconda\Scripts;D:\Download\platform-tools_r30.0.5-windows\platform-tools;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;D:\Download\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.8.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\Administrator\AppData\Local\Yarn\Cache\v6\npm-ms-2.1.2-d09d1f357b443f493382a8eb3ccd183872ae6009-integrity\node_modules\ms\index.js' -> 'C:\Users\Administrator\Desktop\vue_sound_code\node_modules\@babel\core\node_modules\ms\index.js'
+
+npm manifest: 
+  {
+    "name": "vue_sound_code",
+    "version": "1.0.0",
+    "description": "Vue 源码阅读及轮子系列",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "build": "babel src/ -d lib/",
+      "prepublish": "npm run build",
+      "flow": "flow"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/blackCY/vue_sound_code.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/blackCY/vue_sound_code/issues"
+    },
+    "homepage": "https://github.com/blackCY/vue_sound_code#readme",
+    "devDependencies": {
+      "@babel/cli": "^7.12.13",
+      "@babel/core": "^7.12.13",
+      "@babel/preset-flow": "^7.12.13"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
