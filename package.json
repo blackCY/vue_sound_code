@@ -1,0 +1,29 @@
+{
+  "name": "vue_sound_code",
+  "version": "1.0.0",
+  "description": "Vue 源码阅读及轮子系列",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src/ -d lib/",
+    "prepublish": "npm run build",
+    "flow": "flow"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackCY/vue_sound_code.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blackCY/vue_sound_code/issues"
+  },
+  "homepage": "https://github.com/blackCY/vue_sound_code#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.13",
+    "@babel/core": "^7.12.13",
+    "@babel/preset-flow": "^7.12.13",
+    "flow-bin": "^0.144.0"
+  }
+}
