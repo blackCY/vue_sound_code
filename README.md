@@ -14,7 +14,7 @@
 
 - [数据驱动](#数据驱动)
 - - [new Vue 发生了什么](#newVue发生了什么)
-- - [Vue 实例挂载的实现](#实例挂载的实现)
+- - [Vue 实例挂载的实现](#Vue实例挂载的实现)
 - - [render](#render)
 - - [Virtual DOM](#VirtualDOM)
 - - [createElement](#createElement)
@@ -1267,7 +1267,7 @@ export function getData(data: Function, vm: Component): any {
 }
 ```
 
-### <a id="Vue 实例挂载的实现">Vue 实例挂载的实现</a>
+### <a id="Vue实例挂载的实现">Vue 实例挂载的实现</a>
 
 实力挂载的方法是 Vue.prototype.$mount，在 /src/platforms/web/entry-runtime-with-compiler.js 中。
 
