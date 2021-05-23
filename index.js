@@ -1,4 +1,4 @@
-import observer from './observer'
+import observer from './observer';
 
 class Vue {
   constructor(options) {
@@ -14,4 +14,7 @@ const vm = new Vue({
   }
 })
 
-vm._data.a = [4, 5, 6]
+// vm._data.a = [4, 5, 6]
+
+console.log(111)
+console.log(vm.a)
